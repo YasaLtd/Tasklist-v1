@@ -92,8 +92,13 @@ switch ($method) {
             $status = $_GET['status'] ?? null;
             $sort = $_GET['sort'] ?? 'created_desc';
             
-            $allTasks = $tasks->getAll($currentUser['id'], $projectId, $status, $sort);
-            jsonResponse(['success' => true, 'data' => $allTasks]);
+            try {
+                $allTasks = $tasks->getAll($currentUser['id'], $projectId, $status, $sort);
+                jsonResponse(['success' => true, 'data' => $allTasks]);
+            } catch (Exception $e) {
+                error_log("Tasks getAll error: " . $e->getMessage());
+                jsonResponse(['success' => false, 'message' => 'Error loading tasks'], 500);
+            }
         }
         break;
         
@@ -114,13 +119,18 @@ switch ($method) {
             jsonResponse(['success' => false, 'message' => 'Access denied to this project'], 403);
         }
         
-        $newTaskId = $tasks->create($data, $currentUser['id']);
-        
-        if ($newTaskId) {
-            $task = $tasks->get($newTaskId, $currentUser['id']);
-            jsonResponse(['success' => true, 'message' => 'Task created', 'data' => $task], 201);
-        } else {
-            jsonResponse(['success' => false, 'message' => 'Failed to create task'], 500);
+        try {
+            $newTaskId = $tasks->create($data, $currentUser['id']);
+            
+            if ($newTaskId) {
+                $task = $tasks->get($newTaskId, $currentUser['id']);
+                jsonResponse(['success' => true, 'message' => 'Task created', 'data' => $task], 201);
+            } else {
+                jsonResponse(['success' => false, 'message' => 'Failed to create task'], 500);
+            }
+        } catch (Exception $e) {
+            error_log("Tasks create error: " . $e->getMessage());
+            jsonResponse(['success' => false, 'message' => 'Error creating task: ' . $e->getMessage()], 500);
         }
         break;
         
