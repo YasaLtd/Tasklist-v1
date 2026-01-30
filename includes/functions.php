@@ -20,7 +20,7 @@ class Projects {
                        (SELECT COUNT(*) FROM tasks WHERE project_id = p.id AND status = 'completed') as completed_count
                 FROM projects p
                 LEFT JOIN project_users pu ON p.id = pu.project_id
-                WHERE p.owner_id = ? OR pu.user_id = ?";
+                WHERE p.created_by = ? OR pu.user_id = ?";
         
         $params = [$userId, $userId];
         
@@ -43,9 +43,10 @@ class Projects {
         $projects = $stmt->fetchAll();
         
         foreach ($projects as &$project) {
-            $project['owner'] = $this->getUser($project['owner_id']);
+            $project['owner'] = $this->getUser($project['created_by']);
+            $project['owner_id'] = $project['created_by']; // Add for backwards compatibility
             $project['assigned_users'] = $this->getProjectUsers($project['id']);
-            $project['user_role'] = ($project['owner_id'] == $userId) ? 'owner' : 'member';
+            $project['user_role'] = ($project['created_by'] == $userId) ? 'owner' : 'member';
         }
         
         return $projects;
@@ -55,16 +56,17 @@ class Projects {
         $stmt = $this->db->prepare(
             "SELECT p.* FROM projects p
              LEFT JOIN project_users pu ON p.id = pu.project_id
-             WHERE p.id = ? AND (p.owner_id = ? OR pu.user_id = ?)
+             WHERE p.id = ? AND (p.created_by = ? OR pu.user_id = ?)
              LIMIT 1"
         );
         $stmt->execute([$id, $userId, $userId]);
         $project = $stmt->fetch();
         
         if ($project) {
-            $project['owner'] = $this->getUser($project['owner_id']);
+            $project['owner'] = $this->getUser($project['created_by']);
+            $project['owner_id'] = $project['created_by']; // Add for backwards compatibility
             $project['assigned_users'] = $this->getProjectUsers($id);
-            $project['user_role'] = ($project['owner_id'] == $userId) ? 'owner' : 'member';
+            $project['user_role'] = ($project['created_by'] == $userId) ? 'owner' : 'member';
         }
         
         return $project ?: null;
@@ -72,7 +74,7 @@ class Projects {
     
     public function create($data, $userId) {
         $stmt = $this->db->prepare(
-            "INSERT INTO projects (name, description, status, priority, deadline, color, owner_id) 
+            "INSERT INTO projects (name, description, status, priority, deadline, color, created_by) 
              VALUES (?, ?, ?, ?, ?, ?, ?)"
         );
         $stmt->execute([
@@ -116,12 +118,12 @@ class Projects {
     public function delete($id, $userId) {
         if (!$this->isOwner($id, $userId)) return false;
         
-        $stmt = $this->db->prepare("DELETE FROM projects WHERE id = ? AND owner_id = ?");
+        $stmt = $this->db->prepare("DELETE FROM projects WHERE id = ? AND created_by = ?");
         return $stmt->execute([$id, $userId]);
     }
     
     public function isOwner($projectId, $userId) {
-        $stmt = $this->db->prepare("SELECT 1 FROM projects WHERE id = ? AND owner_id = ?");
+        $stmt = $this->db->prepare("SELECT 1 FROM projects WHERE id = ? AND created_by = ?");
         $stmt->execute([$projectId, $userId]);
         return $stmt->fetch() !== false;
     }
@@ -130,7 +132,7 @@ class Projects {
         $stmt = $this->db->prepare(
             "SELECT 1 FROM projects p
              LEFT JOIN project_users pu ON p.id = pu.project_id
-             WHERE p.id = ? AND (p.owner_id = ? OR pu.user_id = ?)"
+             WHERE p.id = ? AND (p.created_by = ? OR pu.user_id = ?)"
         );
         $stmt->execute([$projectId, $userId, $userId]);
         return $stmt->fetch() !== false;
@@ -149,7 +151,7 @@ class Projects {
         }
         
         $project = $this->get($projectId, $assignedBy);
-        if ($user['id'] == $project['owner_id']) {
+        if ($user['id'] == $project['created_by']) {
             return ['success' => false, 'message' => 'Cannot assign the owner'];
         }
         
@@ -201,7 +203,7 @@ class Tasks {
                 JOIN projects p ON t.project_id = p.id
                 LEFT JOIN project_users pu ON p.id = pu.project_id
                 LEFT JOIN task_assignments ta ON t.id = ta.task_id
-                WHERE (p.owner_id = ? OR pu.user_id = ? OR t.owner_id = ? OR ta.user_id = ?)";
+                WHERE (p.created_by = ? OR pu.user_id = ? OR t.created_by = ? OR ta.user_id = ?)";
         
         $params = [$userId, $userId, $userId, $userId];
         
@@ -231,7 +233,8 @@ class Tasks {
         $tasks = $stmt->fetchAll();
         
         foreach ($tasks as &$task) {
-            $task['owner'] = $this->getUser($task['owner_id']);
+            $task['owner'] = $this->getUser($task['created_by']);
+            $task['owner_id'] = $task['created_by']; // Add for backwards compatibility
             $task['assigned_users'] = $this->getTaskAssignments($task['id']);
         }
         
@@ -245,14 +248,15 @@ class Tasks {
              JOIN projects p ON t.project_id = p.id
              LEFT JOIN project_users pu ON p.id = pu.project_id
              LEFT JOIN task_assignments ta ON t.id = ta.task_id
-             WHERE t.id = ? AND (p.owner_id = ? OR pu.user_id = ? OR t.owner_id = ? OR ta.user_id = ?)
+             WHERE t.id = ? AND (p.created_by = ? OR pu.user_id = ? OR t.created_by = ? OR ta.user_id = ?)
              LIMIT 1"
         );
         $stmt->execute([$id, $userId, $userId, $userId, $userId]);
         $task = $stmt->fetch();
         
         if ($task) {
-            $task['owner'] = $this->getUser($task['owner_id']);
+            $task['owner'] = $this->getUser($task['created_by']);
+            $task['owner_id'] = $task['created_by']; // Add for backwards compatibility
             $task['assigned_users'] = $this->getTaskAssignments($id);
         }
         
@@ -273,7 +277,7 @@ class Tasks {
         }
         
         $stmt = $this->db->prepare(
-            "INSERT INTO tasks (project_id, title, description, status, priority, deadline, owner_id, 
+            "INSERT INTO tasks (project_id, title, description, status, priority, deadline, created_by, 
                                is_recurring, recurrence_type, recurrence_interval, recurrence_end_date, next_occurrence) 
              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         );
@@ -336,7 +340,7 @@ class Tasks {
         if (!$task) return false;
         
         $projects = new Projects();
-        if ($task['owner_id'] != $userId && !$projects->isOwner($task['project_id'], $userId)) {
+        if ($task['created_by'] != $userId && !$projects->isOwner($task['project_id'], $userId)) {
             return false;
         }
         
@@ -347,7 +351,7 @@ class Tasks {
     public function canEdit($taskId, $userId) {
         $task = $this->get($taskId, $userId);
         if (!$task) return false;
-        if ($task['owner_id'] == $userId) return true;
+        if ($task['created_by'] == $userId) return true;
         
         foreach ($task['assigned_users'] as $u) {
             if ($u['id'] == $userId) return true;
@@ -442,7 +446,7 @@ class Tasks {
         );
         
         $stmt = $this->db->prepare(
-            "INSERT INTO tasks (project_id, title, description, status, priority, deadline, owner_id, 
+            "INSERT INTO tasks (project_id, title, description, status, priority, deadline, created_by, 
                                is_recurring, recurrence_type, recurrence_interval, recurrence_end_date, next_occurrence, parent_task_id) 
              VALUES (?, ?, ?, 'pending', ?, ?, ?, 1, ?, ?, ?, ?, ?)"
         );
@@ -452,7 +456,7 @@ class Tasks {
             $task['description'],
             $task['priority'],
             $nextDeadline,
-            $task['owner_id'],
+            $task['created_by'],
             $task['recurrence_type'],
             $task['recurrence_interval'] ?? 1,
             $task['recurrence_end_date'],
