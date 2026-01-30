@@ -76,8 +76,14 @@ switch ($method) {
         } else {
             $status = $_GET['status'] ?? null;
             $sort = $_GET['sort'] ?? 'created_desc';
-            $allProjects = $projects->getAll($currentUser['id'], $status, $sort);
-            jsonResponse(['success' => true, 'data' => $allProjects]);
+            
+            try {
+                $allProjects = $projects->getAll($currentUser['id'], $status, $sort);
+                jsonResponse(['success' => true, 'data' => $allProjects]);
+            } catch (Exception $e) {
+                error_log("Projects getAll error: " . $e->getMessage());
+                jsonResponse(['success' => false, 'message' => 'Error loading projects'], 500);
+            }
         }
         break;
         
@@ -88,13 +94,18 @@ switch ($method) {
             jsonResponse(['success' => false, 'message' => 'Project name is required'], 400);
         }
         
-        $newProjectId = $projects->create($data, $currentUser['id']);
-        
-        if ($newProjectId) {
-            $project = $projects->get($newProjectId, $currentUser['id']);
-            jsonResponse(['success' => true, 'message' => 'Project created', 'data' => $project], 201);
-        } else {
-            jsonResponse(['success' => false, 'message' => 'Failed to create project'], 500);
+        try {
+            $newProjectId = $projects->create($data, $currentUser['id']);
+            
+            if ($newProjectId) {
+                $project = $projects->get($newProjectId, $currentUser['id']);
+                jsonResponse(['success' => true, 'message' => 'Project created', 'data' => $project], 201);
+            } else {
+                jsonResponse(['success' => false, 'message' => 'Failed to create project'], 500);
+            }
+        } catch (Exception $e) {
+            error_log("Projects create error: " . $e->getMessage());
+            jsonResponse(['success' => false, 'message' => 'Error creating project: ' . $e->getMessage()], 500);
         }
         break;
         
