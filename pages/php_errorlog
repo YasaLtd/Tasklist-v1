@@ -1,0 +1,452 @@
+[30-Jan-2026 13:44:31 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/tasklist.yasa.fi/public_html/includes/auth.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php on line 14
+[30-Jan-2026 13:44:33 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/tasklist.yasa.fi/public_html/includes/auth.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php on line 14
+[30-Jan-2026 13:44:49 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/tasklist.yasa.fi/public_html/includes/auth.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php on line 14
+[30-Jan-2026 13:44:51 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/tasklist.yasa.fi/public_html/includes/auth.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php on line 14
+[30-Jan-2026 13:45:29 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/tasklist.yasa.fi/public_html/includes/auth.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php on line 14
+[30-Jan-2026 13:46:39 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/tasklist.yasa.fi/public_html/includes/auth.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php on line 14
+[30-Jan-2026 13:46:43 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/tasklist.yasa.fi/public_html/includes/auth.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php on line 14
+[30-Jan-2026 13:49:04 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/tasklist.yasa.fi/public_html/includes/auth.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php on line 14
+[30-Jan-2026 13:50:21 Europe/Helsinki] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/tasklist.yasa.fi/public_html/includes/auth.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/pages/login.php on line 14
+[30-Jan-2026 22:05:22 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:05:24 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:13 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:16 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:36 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:37 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:37 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:38 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:38 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:38 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:41 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:41 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:42 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:42 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:42 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:42 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:42 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:44 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:12:56 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:15:58 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:16:00 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(3)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:16:56 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:17:32 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:18:09 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'field list' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:66
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(66): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 66
+[30-Jan-2026 22:21:16 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:21:16 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:21:23 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:21:23 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:21:32 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:21:35 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:21:35 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:21:39 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:21:39 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:21:40 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:23:31 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:23:31 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:23:35 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:23:36 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:23:36 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:23:42 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:23:42 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:24:47 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:24:47 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:25:51 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:25:51 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:26:11 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:26:11 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:28:36 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:28:36 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:28:57 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:28:57 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:29:03 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:29:03 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:29:17 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:29:17 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:29:48 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:29:48 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:30:13 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:30:17 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:30:17 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:30:21 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:30:48 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:30:48 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:11 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:11 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:16 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:17 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:17 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:18 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:21 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:22 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:22 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:23 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:23 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:39 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:41 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:41 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:44 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:32:44 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:33:44 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:33:44 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:33:49 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:33:51 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:33:51 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:33:52 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:33:52 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:36:46 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:36:46 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:36:47 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:36:47 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:36:48 Europe/Helsinki] Projects getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:36:48 Europe/Helsinki] Tasks getAll error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause'
+[30-Jan-2026 22:40:15 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/tasks.php(32): Projects->getAll(7)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:40:17 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/tasks.php(32): Projects->getAll(7)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:40:18 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/tasks.php(32): Projects->getAll(7)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:40:31 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:41:05 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:41:06 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:41:26 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/projects.php(43): Projects->getAll(7, NULL, 'created_desc')
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:41:29 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/projects.php(43): Projects->getAll(7, NULL, 'created_desc')
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:41:30 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/projects.php(43): Projects->getAll(7, NULL, 'created_desc')
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:41:34 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/projects.php(43): Projects->getAll(7, NULL, 'created_desc')
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:46:08 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(7)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:46:44 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(29): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:50:10 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:50:10 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:50:11 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:50:13 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:50:15 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:51:16 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:51:16 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:51:18 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:52:47 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:52:48 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:52:58 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:52:59 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:53:00 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:45
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(45): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 45
+[30-Jan-2026 22:54:32 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:41
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(41): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 41
+[30-Jan-2026 22:54:33 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:41
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(41): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 41
+[30-Jan-2026 22:54:33 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:41
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(41): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 41
+[30-Jan-2026 22:54:33 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:41
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(41): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 41
+[30-Jan-2026 22:54:34 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:41
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(41): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 41
+[30-Jan-2026 22:54:40 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:41
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(41): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 41
+[30-Jan-2026 22:54:41 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:41
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(41): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 41
+[30-Jan-2026 22:54:42 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:41
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(41): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 41
+[30-Jan-2026 22:54:42 Europe/Helsinki] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.owner_id' in 'where clause' in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php:41
+Stack trace:
+#0 /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php(41): PDO->prepare('SELECT DISTINCT...')
+#1 /home/customer/www/tasklist.yasa.fi/public_html/pages/dashboard.php(30): Projects->getAll(4)
+#2 {main}
+  thrown in /home/customer/www/tasklist.yasa.fi/public_html/includes/functions.php on line 41
