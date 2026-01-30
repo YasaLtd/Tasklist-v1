@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 30.01.2026 klo 21:13
+-- Generation Time: 30.01.2026 klo 22:00
 -- Palvelimen versio: 8.4.5-5
 -- PHP Version: 8.2.30
 
@@ -104,7 +104,11 @@ INSERT INTO `projects` (`id`, `name`, `description`, `status`, `priority`, `crea
 (1, 'Trainbot', '', 'active', 'high', 1, '2026-01-30 13:42:21', NULL, '2026-02-08 00:00:00', '#fbff05'),
 (2, 'Purge Family Full Sim', 'Keep track of the stuff needed to be ready for the full sim. ', 'active', 'high', 46, '2026-01-30 19:39:19', NULL, '2026-02-28 00:00:00', '#41973f'),
 (3, 'Purge Club', '', 'active', 'medium', 46, '2026-01-30 19:41:31', NULL, '2026-05-30 00:00:00', '#37505d'),
-(4, 'Keep Rena Alive', '', 'active', 'medium', 46, '2026-01-30 19:49:10', NULL, NULL, '#37505d');
+(4, 'Keep Rena Alive', '', 'active', 'medium', 46, '2026-01-30 19:49:10', NULL, NULL, '#37505d'),
+(6, 'Keep Rena Alive', 'Repeating tasks to make sure life things still get done ', 'active', 'medium', 7, '2026-01-30 22:25:35', NULL, NULL, '#37505d'),
+(7, 'Full Sim Purge Plan', '', 'active', 'medium', 7, '2026-01-30 22:25:48', NULL, NULL, '#37505d'),
+(8, 'Club Purge Management', '', 'active', 'medium', 7, '2026-01-30 22:26:01', NULL, NULL, '#37505d'),
+(9, 'Test', '', 'active', 'medium', 8, '2026-01-30 22:27:00', NULL, NULL, '#37505d');
 
 -- --------------------------------------------------------
 
@@ -140,6 +144,12 @@ CREATE TABLE `tasks` (
   `updated_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `deadline` datetime DEFAULT NULL,
   `completed_at` datetime DEFAULT NULL,
+  `is_recurring` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'Is this a recurring task?',
+  `recurrence_type` enum('daily','weekly','monthly','yearly') COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'How often task repeats',
+  `recurrence_interval` int DEFAULT '1' COMMENT 'Repeat every X days/weeks/months/years',
+  `recurrence_end_date` date DEFAULT NULL COMMENT 'When to stop creating recurring tasks',
+  `next_occurrence` date DEFAULT NULL COMMENT 'Next scheduled occurrence date',
+  `parent_task_id` int DEFAULT NULL COMMENT 'Original task ID if this is a recurring instance',
   `order_index` int DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -147,16 +157,16 @@ CREATE TABLE `tasks` (
 -- Vedos taulusta `tasks`
 --
 
-INSERT INTO `tasks` (`id`, `project_id`, `title`, `description`, `status`, `priority`, `assigned_to`, `created_by`, `created_at`, `updated_at`, `deadline`, `completed_at`, `order_index`) VALUES
-(1, 3, 'Morning shift trainer', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:42:03', NULL, '2026-12-28 00:00:00', NULL, 1),
-(2, 3, 'Event board setup. ', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:43:44', NULL, '2026-02-13 00:00:00', NULL, 2),
-(3, 3, 'Escort Rental board', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:44:09', NULL, '2026-03-31 00:00:00', NULL, 3),
-(4, 2, 'Update Graveyard to have all the people ', 'Syn, Eve, steamy, star, Dae ect', 'pending', 'medium', NULL, 46, '2026-01-30 19:44:59', NULL, NULL, NULL, 1),
-(5, 3, 'Get all the DJ Gestures', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:45:31', NULL, NULL, NULL, 4),
-(6, 3, 'Create Gestures for those who don\'t have one', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:45:43', NULL, NULL, NULL, 5),
-(7, 3, 'Aquire Shift Leads', 'For when we get big enough that Management can\'t attend all sets. ', 'pending', 'low', NULL, 46, '2026-01-30 19:47:49', NULL, NULL, NULL, 6),
-(9, 4, 'Do your damn laundry', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:49:25', NULL, NULL, NULL, 1),
-(10, 4, 'Call the Dietition people', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:49:45', NULL, NULL, NULL, 2);
+INSERT INTO `tasks` (`id`, `project_id`, `title`, `description`, `status`, `priority`, `assigned_to`, `created_by`, `created_at`, `updated_at`, `deadline`, `completed_at`, `is_recurring`, `recurrence_type`, `recurrence_interval`, `recurrence_end_date`, `next_occurrence`, `parent_task_id`, `order_index`) VALUES
+(1, 3, 'Morning shift trainer', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:42:03', NULL, '2026-12-28 00:00:00', NULL, 0, NULL, 1, NULL, NULL, NULL, 1),
+(2, 3, 'Event board setup. ', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:43:44', NULL, '2026-02-13 00:00:00', NULL, 0, NULL, 1, NULL, NULL, NULL, 2),
+(3, 3, 'Escort Rental board', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:44:09', NULL, '2026-03-31 00:00:00', NULL, 0, NULL, 1, NULL, NULL, NULL, 3),
+(4, 2, 'Update Graveyard to have all the people ', 'Syn, Eve, steamy, star, Dae ect', 'pending', 'medium', NULL, 46, '2026-01-30 19:44:59', NULL, NULL, NULL, 0, NULL, 1, NULL, NULL, NULL, 1),
+(5, 3, 'Get all the DJ Gestures', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:45:31', NULL, NULL, NULL, 0, NULL, 1, NULL, NULL, NULL, 4),
+(6, 3, 'Create Gestures for those who don\'t have one', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:45:43', NULL, NULL, NULL, 0, NULL, 1, NULL, NULL, NULL, 5),
+(7, 3, 'Aquire Shift Leads', 'For when we get big enough that Management can\'t attend all sets. ', 'pending', 'low', NULL, 46, '2026-01-30 19:47:49', NULL, NULL, NULL, 0, NULL, 1, NULL, NULL, NULL, 6),
+(9, 4, 'Do your damn laundry', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:49:25', NULL, NULL, NULL, 0, NULL, 1, NULL, NULL, NULL, 1),
+(10, 4, 'Call the Dietition people', '', 'pending', 'medium', NULL, 46, '2026-01-30 19:49:45', NULL, NULL, NULL, 0, NULL, 1, NULL, NULL, NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -211,12 +221,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `display_name`, `role`, `status`, `avatar_color`, `created_at`, `updated_at`, `last_login`) VALUES
-(1, 'admin', 'info@yasa.fi', '$2y$10$8K1p/a7vLbK3sM4TS7yCXOQpQYGvGdVKwK8mA1vX6sYqQHV6Z7/Uy', 'Admin', 'admin', 'active', '#37505d', '2026-01-30 20:14:38', NULL, NULL),
-(3, 'pulla', 'anteryasa@gmail.com', '$2y$10$GHVuH4rCD7PoKYwUIiKBfeXQkLhoXNclY3jxGi9OEu0OGqtWXEnH6', 'Steamy', 'admin', 'active', '#F59E0B', '2026-01-30 21:05:17', '2026-01-30 21:28:55', '2026-01-30 21:05:22'),
-(4, 'pullamies', 'crawlernerot@gmail.com', '$2y$10$mh0hqA1glP.cr9DeHU/so.9yH8u19uirA/Fb1C0rPdGELo0tYEE1q', 'Steamy', 'admin', 'active', '#10B981', '2026-01-30 21:16:46', '2026-01-30 22:02:38', '2026-01-30 22:02:38'),
 (5, 'sarahb13', 'sewhite0542@gmail.com', '$2y$10$f2JXYgvRYvQ4sjyHMAkEHetLI3LLycg87wMV0X9SCgBBb7jwDnQLe', 'Sarah', 'user', 'active', '#10B981', '2026-01-30 21:24:42', '2026-01-30 21:24:47', '2026-01-30 21:24:47'),
 (6, 'jakobe_marques', 'jeremyyy36@gmail.com', '$2y$10$cuZ2qZ3Y0aZLnRsv9506x.VwCpEmS.LfIAanPDh.hcV60Dqudq0Sq', 'Jakobe', 'user', 'active', '#37505d', '2026-01-30 21:29:41', '2026-01-30 21:29:48', '2026-01-30 21:29:48'),
-(7, 'rena', 'cora217@gmail.com', 'wordpress_auth', 'Renalynn Bob', 'admin', 'active', '#EC4899', '2026-01-30 21:32:11', NULL, '2026-01-30 21:32:11');
+(7, 'rena', 'cora217@gmail.com', 'wordpress_auth', 'Renalynn Bob', 'admin', 'active', '#EC4899', '2026-01-30 21:32:11', NULL, '2026-01-30 21:32:11'),
+(8, 'admin', 'info@yasa.fi', '$2y$10$uT5AXx8ryr5giF7fgAkZgOyC4y/yAZVGfswitc4Q/To5lPLh5JJWy', 'Anter Yasa', 'admin', 'active', '#EC4899', '2026-01-30 22:26:23', '2026-01-30 22:26:46', '2026-01-30 22:26:29'),
+(9, 'elisa', 'elisapitkanen1@gmail.com', '$2y$10$lMNAk5Cj03gq63GLN5cfF.btfyuYtVXHgC0WkItMfnkWInzSUy86G', 'Elisa P.', 'user', 'active', '#EF4444', '2026-01-30 23:00:01', '2026-01-30 23:00:08', '2026-01-30 23:00:08');
 
 -- --------------------------------------------------------
 
@@ -247,10 +256,10 @@ INSERT INTO `user_sessions` (`id`, `user_id`, `session_token`, `ip_address`, `us
 (9, 6, 'e24f81deabe37f3206d40d50bf5468eff17941dfce6a94aa6e75f64a227c3485', '98.39.219.126', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0', '2026-01-30 21:29:48', '2026-03-01 22:29:48'),
 (10, 7, 'de136327a460ed29e66d2e1c5ab80ff3e8ebdbee8b430a60440907ff45593ede', '173.217.219.81', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-01-30 21:32:11', '2026-03-01 22:32:11'),
 (11, 4, 'a04003800c207b7e22599b6abd674d4826745c904715248cfbc5c2904b4d06d6', '212.149.217.182', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-01-30 21:40:31', '2026-03-01 22:40:31'),
-(12, 4, 'c8eb3dc50bd8bd148a1cc39debcd83f5ad5e45f8780ea08d7225b2013ae2722d', '212.149.217.182', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-01-30 21:46:44', '2026-03-01 22:46:44'),
 (13, 4, 'c2cf3cce7b3986447bb8f6a6446e9adf9078d443c79b9c9025410d28f745cb89', '212.149.217.182', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-01-30 21:52:58', '2026-03-01 22:52:58'),
 (14, 4, 'aba0e2b782d67187bebf161a8cd152d1addda6573129273cccf0f62b0123d3c7', '212.149.217.182', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-01-30 21:54:40', '2026-03-01 22:54:40'),
-(15, 4, 'd37a9ca5dd502172222277f107364fad986abc2281c04ff877aaa046e767e2ef', '212.149.217.182', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-01-30 22:02:38', '2026-03-01 23:02:38');
+(17, 8, '08d3d6038506ca2aa6b101d6af38a0927e2f4c5d33e3bfc86a252a1a4ac87b14', '212.149.217.182', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-01-30 22:26:29', '2026-03-01 23:26:29'),
+(18, 9, '044ff289fcba5884276f32c678f1a6d47c7ed72c36f512fd0ebdb89454d99d09', '84.231.235.55', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', '2026-01-30 23:00:08', '2026-03-02 00:00:08');
 
 --
 -- Indexes for dumped tables
@@ -300,7 +309,8 @@ ALTER TABLE `tasks`
   ADD KEY `idx_status` (`status`),
   ADD KEY `idx_assigned` (`assigned_to`),
   ADD KEY `idx_deadline` (`deadline`),
-  ADD KEY `idx_order` (`order_index`);
+  ADD KEY `idx_order` (`order_index`),
+  ADD KEY `idx_parent_task` (`parent_task_id`);
 
 --
 -- Indexes for table `task_assignments`
@@ -354,7 +364,7 @@ ALTER TABLE `invitations`
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `project_users`
@@ -366,7 +376,7 @@ ALTER TABLE `project_users`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `task_assignments`
@@ -384,13 +394,13 @@ ALTER TABLE `task_comments`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user_sessions`
 --
 ALTER TABLE `user_sessions`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Rajoitteet vedostauluille
